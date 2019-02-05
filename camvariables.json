@@ -233,7 +233,7 @@
       "secured": false,
       "hidden": false,
       "shortname": "",
-      "type": "string"
+      "type": "link"
     },
     {
       "name": "Use the following credentias:",

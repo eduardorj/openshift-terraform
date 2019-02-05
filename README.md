@@ -1,1 +1,1 @@
-# openshift-terraform
+# OpenShift Deployment using Terraform

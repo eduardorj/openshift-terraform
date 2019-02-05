@@ -118,8 +118,6 @@ EOF
     ]
   }
 }
-# where are my output paramns!
-# testing changing control v2!
 
 output "The IP address of your server is:" {
   value = "${ibm_compute_vm_instance.softlayer_virtual_guest.ipv4_address}"
@@ -130,7 +128,7 @@ output "To access your openshift instance to go:" {
 output "Use the following credentias:" {
   value = "Username: ${var.openshift-username} and Password: ${var.openshift-password}"
 }
-output "You also can login using command line:" {
+output "You also can log on using command line:" {
   value = "oc login -u ${var.openshift-username} -p ${var.openshift-password} https://console.${ibm_compute_vm_instance.softlayer_virtual_guest.ipv4_address}.nip.io:8443/"
 }
 
