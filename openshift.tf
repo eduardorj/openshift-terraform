@@ -66,7 +66,7 @@ resource "ibm_compute_ssh_key" "temp_public_key" {
 resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   hostname                 = "${var.hostname}"
   os_reference_code        = "CENTOS_7_64"
-  domain                   = "cam.ibm.com"
+  domain                   = "ed.blog.br"
   datacenter               = "${var.datacenter}"
   network_speed            = 10
   hourly_billing           = true
@@ -105,7 +105,7 @@ sed -i 's/NM_CONTROLLED=no/NM_CONTROLLED=yes/' /etc/sysconfig/network-scripts/if
 sed -i 's/NM_CONTROLLED=no/NM_CONTROLLED=yes/' /etc/sysconfig/network-scripts/ifcfg-eth1
 
 # Perform installation
-curl https://raw.githubusercontent.com/gshipley/installcentos/master/install-openshift.sh | INTERACTIVE=false /bin/bash &>/dev/null
+#curl https://raw.githubusercontent.com/gshipley/installcentos/master/install-openshift.sh | INTERACTIVE=false /bin/bash &>/dev/null
 
 EOF
 
